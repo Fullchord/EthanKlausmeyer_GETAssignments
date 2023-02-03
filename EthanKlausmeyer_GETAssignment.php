@@ -9,20 +9,16 @@
         $age=filter_input(INPUT_GET, 'age', FILTER_SANITIZE_NUMBER_INT);
 
     
-    //Introduce with name
-        echo "Hello, my name is {$firstname} {$lastname}.<br/>";
+        echo "Hello, my name is {$firstname} {$lastname}.<br/>"; //introduction
     
-    //based on condition, display voting legality
-        if($age>=18){
+        if($age>=18){ //condition
             echo "I am {$age} years old and I am old enough to vote in the United States.<br/>";
         }
         else{
             echo "I am {$age} years old and I am not old enough to vote in the United States.<br/>";
         }
-    //calculate number of days from age
         $numofdays = $age  * 365;
         echo "Number of days from the age is {$numofdays} <br/>";
-    //display current date
-        $date = date('Y-m-d H:i:s');
+        $date = date('Y-m-d H:i:s'); //date
         echo $date;
     ?>
